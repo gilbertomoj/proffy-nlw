@@ -1,7 +1,7 @@
 import express, { response } from 'express';
 const app = express();
 
-app.use(express.json());
+app.use(express.json());//
 
 app.get("/users", (request , response)=>{
     response.json({'Roberto' :"13212312s3"})
