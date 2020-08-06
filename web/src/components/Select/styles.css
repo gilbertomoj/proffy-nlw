@@ -1,4 +1,3 @@
-
 .select-block{
     position: relative;
 }
@@ -12,7 +11,7 @@
 }
 
 
-.select-block input{
+.select-block select{
     width: 100%;
     height: 5.6rem;
     margin-top: 0.8rem;
