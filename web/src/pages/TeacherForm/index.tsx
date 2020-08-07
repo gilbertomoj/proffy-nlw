@@ -8,18 +8,13 @@ import Select from '../../components/Select';
 
 function TeacherForm(){
     const [scheduleItems, setScheduleItems] = useState([
-        {week_day: 0 , from:'8:00 AM', to : '4:00 PM'},
-        {week_day: 3 , from:'5:00 AM', to : '3:00 PM'}
+        { week_day: 0, from : '', to:'' }
 
     ]);
     function addNewScheduleItem(){
         setScheduleItems([
             ...scheduleItems,
-            {
-                week_day: 0,
-                from : '',
-                to:''
-            }
+            { week_day: 0, from : '', to:'' }
         ]);
     }
 
