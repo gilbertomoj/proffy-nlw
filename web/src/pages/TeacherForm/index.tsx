@@ -5,6 +5,7 @@ import Input from '../../components/Input';
 import warningIcon from '../../assets/images/icons/warning.svg';
 import Textarea from '../../components/TextArea';
 import Select from '../../components/Select';
+import api from '../../services/api';
 
 
 function TeacherForm(){
@@ -33,10 +34,25 @@ function TeacherForm(){
 
     function handleCreateClass(e: FormEvent){
 
+        
         e.preventDefault();
 
+        api.post('classes',{
+            name,
+            avatar,
+            whatsapp,
+            bio,
+            subject,
+            cost: Number(cost),
+            schedule : scheduleItems
+        }).then(()=>{
+            alert('Cadastro realizado com sucesso')
+        }).catch(()=>{
+            alert('Erro no cadastro')
+        })
+
         console.log({
-            name, avatar, whatsapp, subject , cost 
+            name, avatar, whatsapp, subject , cost , scheduleItems
         })
     }
 
@@ -121,6 +137,7 @@ function TeacherForm(){
                         <Select 
                         name="week_day" 
                         label="Dia da semana"
+                        value={scheduleItem.week_day}
                         onChange={e=>setScheduleItemValue(index, 'week_day', e.target.value)}
                         options={[
                             {value: '0 ', label:'Domingo'},
@@ -134,8 +151,20 @@ function TeacherForm(){
                         ]}
                         />
     
-                        <Input name="from"  label="Das" type="time"></Input>
-                        <Input name="to"  label="Até" type="time"></Input>
+                        <Input 
+                        name="from"  
+                        label="Das" 
+                        type="time"
+                        value={scheduleItem.from}
+                        onChange={e=>setScheduleItemValue(index, 'from', e.target.value)}
+                        ></Input>
+                        <Input 
+                        name="to"  
+                        label="Até" 
+                        type="time"
+                        value={scheduleItem.to}
+                        onChange={e=>setScheduleItemValue(index, 'to', e.target.value)}
+                        ></Input>
     
                     </div>
     
