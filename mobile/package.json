@@ -8,6 +8,8 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "@expo-google-fonts/archivo": "^0.1.0",
+    "@expo-google-fonts/poppins": "^0.1.0",
     "expo": "~38.0.8",
     "expo-status-bar": "^1.0.2",
     "react": "~16.11.0",
