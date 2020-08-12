@@ -27,7 +27,7 @@ function Landing(){
         <Text style={styles.titleBold}>O que deseja fazer</Text>
     </Text>
     <View style={styles.buttonsContainer}>
-        <RectButton style={[styles.button, styles.buttonPrimary]}>
+        <RectButton onPress={handleNavigateToStudyPage} style={[styles.button, styles.buttonPrimary]}>
             <Image source={studyIcon}></Image>
             <Text onPress={handleNavigateToStudyPage}style={styles.buttonText}>
                 Estudar
