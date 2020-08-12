@@ -17,7 +17,8 @@ function TeacherList(){
     const [week_day, setWeekDay] = useState('');
     const [time, setTime] = useState('');
 
-    useEffect(()=>{
+
+    function loadFavorites(){
         AsyncStorage.getItem('favorites').then(response =>{
             if(response){   
                 const favoritedTeachers = JSON.parse(response);
@@ -28,13 +29,14 @@ function TeacherList(){
                 setFavorites(favoritedTeachersId);
             }
         });
-    },[]);
-
+    }
 
     function handleToggleFiltersVisible(){
         setIsFiltersVisible(!isFiltersVisible);
     }
     async function handleFiltersSubmit(){
+        loadFavorites();
+        
         const response = await api.get('classes',{
             params:{
                 subject,
