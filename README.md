@@ -4,12 +4,12 @@ Projeto desenvolvido na 2° Next Level Week
 
 ## :information_source:	 Sobre
 Projeto construido com o intuito de conectar os estudantes ao professores e suas aulas
-## Tecnologias utilizadas
+## :hammer_and_wrench:	Tecnologias utilizadas
  - TypeScript
  - CSS
  - NodeJS
  - React Native 
-## Recursos utilizados 
+## :dart:	Recursos utilizados 
  - API Restful
    - Banco de dados feito em SQLite
    - Rotas para cadastro e filtro
