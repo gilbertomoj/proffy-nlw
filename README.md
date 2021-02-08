@@ -20,9 +20,7 @@ Projeto construido com o intuito de conectar os estudantes ao professores e suas
  - Versão Mobile
    - Favoritos com armazenamento local 
    - Busca de professores com filtros 
-      - Busca de professores com filtros 
-      - Favoritos com armazenamento local
-
+ 
     
 
  
